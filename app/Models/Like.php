@@ -14,6 +14,6 @@ class Like extends Model
 
     public function blog(): BelongsTo
     {
-    return $this->belongsTo(Blog::class, 'blog_id', 'id');
+        return $this->belongsTo(Blog::class, 'blog_id', 'id');
     }
 }

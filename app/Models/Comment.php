@@ -15,11 +15,11 @@ class Comment extends Model
 
     public function blog(): BelongsTo
     {
-    return $this->belongsTo(Blog::class, 'blog_id', 'id');
+        return $this->belongsTo(Blog::class, 'blog_id', 'id');
     }
 
-    public function user() :BelongsTo
+    public function user(): BelongsTo
     {
-    return $this->belongsTo(User::class, 'user_id', 'id');
+        return $this->belongsTo(User::class, 'user_id', 'id');
     }
 }

@@ -18,12 +18,12 @@ class User extends Model
         return $this->hasMany(Blog::class, 'user_id', 'id');
     }
 
-    public function comments() :HasMany
+    public function comments(): HasMany
     {
         return $this->hasMany(Comment::class, 'user_id', 'id');
     }
 
-    public function likes() : BelongsToMany
+    public function likes(): BelongsToMany
     {
         return $this->belongsToMany(Like::class, 'user_id', 'id');
     }

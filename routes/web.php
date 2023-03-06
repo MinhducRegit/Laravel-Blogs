@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/',[BlogController::class, 'index'])-> name('blog');
-Route::get('/login',[UserController::class, 'login'])-> name('login');
-
+Route::prefix('/')->group(function() {
+Route::get('/',[BlogController::class, 'index'])->name('blog');
+Route::get('/login',[UserController::class, 'login'])->name('login');
+});
