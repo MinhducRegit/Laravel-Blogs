@@ -1,2 +1,5 @@
-import './bootstrap';
-import './main';
+import "./client/tab-menu";
+
+import "./admin/app";
+import "./admin/jquery.slimscroll";
+import "./admin/owl_carousel";

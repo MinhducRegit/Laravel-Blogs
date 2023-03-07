@@ -16,3 +16,9 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+/resources/fontawesome
+/resources/ckeditor
+/resources/fonts
+/resources/js
+/resources/icons
+/resources/css/admin

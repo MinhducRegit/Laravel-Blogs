@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
+use DB;
+
 class Blog extends Model
 {
     use HasFactory;
@@ -32,5 +34,13 @@ class Blog extends Model
     public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class, 'category_id', 'id');
+    }
+
+    public function getAllBlogs()
+    {
+
+        $blogs = DB::table($this->table)->orderBy('created_at', 'desc')->get();
+        // dd($blogs);
+        return $blogs;
     }
 }
