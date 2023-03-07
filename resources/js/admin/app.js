@@ -151,5 +151,3 @@ function ($) {
     "use strict";
     $.MainApp.init();
 }(window.jQuery);
-
-

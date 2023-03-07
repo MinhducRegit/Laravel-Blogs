@@ -79,6 +79,3 @@
                     </div>
                     <!-- end row -->
 @endsection
-@section('js')
-<script src="{{asset('assets/plugins/datatables.min.js')}}"></script>
-@endsection
