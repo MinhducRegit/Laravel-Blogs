@@ -24,19 +24,18 @@ class LoginRequest extends FormRequest
     public function rules()
     {
         return [
-            'email'=> 'bail|required|email',
-            'password'=> 'required'
+            'email' => 'bail|required|email',
+            'password' => 'required'
         ];
     }
-    public function messages() 
+    public function messages()
     {
-       return [
-        'email' => 'Bạn chưa nhập :attribute',
-        'password' => 'Bạn chưa nhập  :attribute'
-       ];
+        return [
+            'email' => ':attributes ' . __('msg.msg-wrong-data-type'),
+        ];
     }
 
-    public function attributes() 
+    public function attributes()
     {
         return [
             'email' => 'Email',
@@ -47,9 +46,9 @@ class LoginRequest extends FormRequest
     public function withValidator($validator)
     {
         $validator->after(function ($validator) {
-            if ($validator->errors()->count() > 0){
-                $validator->errors()->add('msg', 'Tên đăng nhập hoặc mật khẩu không chính xác');
+            if ($validator->errors()->count() > 0) {
+                $validator->errors()->add('msg',);
             }
-            });
-        }
+        });
+    }
 }

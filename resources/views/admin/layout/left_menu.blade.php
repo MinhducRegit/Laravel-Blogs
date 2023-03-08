@@ -4,30 +4,30 @@
   <div class="topbar-left">
       <a href="" class="logo">
           <img src="{{asset('assets/images/anh-hacker-1.jpg')}}" class="logo-lg" alt="" height="25">
-         <span> Regit</span>
+         <span>{{__('admin.name-company')}}</span>
       </a>
   </div>
       <!--- Sidemenu -->
       <div id="sidebar-menu">
           <!-- Left Menu Start -->
           <ul class="metismenu" id="side-menu">
-              <li class="menu-title">Menu</li>
+              <li class="menu-title">{{__('admin.menu')}}</li>
               <li>
-                  <a href="{{ route('users') }}" class="waves-effect">
-                  <span class="mdi mdi-account"></span><span> Users </span>
+                  <a href="{{ route('admin') }}" class="waves-effect">
+                  <span class="mdi mdi-account"></span><span>{{__('admin.title-user')}}</span>
                   </a>
-              </li>
+              </li> 
               <li>
                   <a href="{{ route('blogs') }}" class="waves-effect">
-                  <span class="mdi mdi-google-controller"></span><span class="badge badge-info badge-pill float-right">9+</span> <span>Blogs</span>
+                  <span class="mdi mdi-google-controller"></span><span class="badge badge-info badge-pill float-right">9+</span> <span>{{__('admin.title-blog')}}</span>
                   </a>
               </li>
 
               <li>
-                  <a href="{{ route('comments') }}" class="waves-effect"><span class="mdi mdi-message-text"></span><span>Comment</span></a>
+                  <a href="{{ route('comments') }}" class="waves-effect"><span class="mdi mdi-message-text"></span><span>{{__('admin.title-comment')}}</span></a>
               </li>
               <li>
-                  <a href="" class="waves-effect"><span class="mdi mdi-library-books"></span><span>Password Resets</span></a>
+                  <a href="" class="waves-effect"><span class="mdi mdi-library-books"></span><span>{{__('admin.title-password_reset')}}</span></a>
               </li>
           </ul>
 

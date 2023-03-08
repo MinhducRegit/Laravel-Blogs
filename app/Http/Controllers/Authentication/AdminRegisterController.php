@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Http\Requests\Authentication\RegisterRequest;
 
-class RegisterController extends Controller
+class AdminRegisterController extends Controller
 {
     private $users;
     public function __construct()
@@ -17,7 +17,6 @@ class RegisterController extends Controller
     public function index()
     {
         $title = 'Register';
-
         return view('authentication.register.index', compact('title'));
     }
 
@@ -27,9 +26,10 @@ class RegisterController extends Controller
             'username' => $request->username,
             'email' => $request->email,
             'password' => md5($request->password),
+            'role' => 2,
         ];
 
         $this->users->addUser($dataInsert);
-        return redirect()->route('login')->with('msg', __('msg.login-success'));
+        return redirect()->route('login-admin')->with('msg', __('msg.login-success'));
     }
 }

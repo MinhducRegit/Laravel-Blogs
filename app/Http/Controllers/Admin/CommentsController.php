@@ -18,7 +18,6 @@ class CommentsController extends Controller
     {
         $title = 'Comments';
         $commentsList = $this->comments->getAllComments();
-        // dd($commentsList);
         return view('admin.comments.index', compact('title', 'commentsList'));
     }
 }

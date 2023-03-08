@@ -17,9 +17,8 @@ class BlogsController extends Controller
 
     public function index()
     {
-        $title = 'Blogs';
         $blogsList = $this->blogs->getAllBlogs();
         // dd($blogsList);
-        return view('admin.blogs.index', compact('title', 'blogsList'));
+        return view('admin.blogs.index', compact('blogsList'));
     }
 }

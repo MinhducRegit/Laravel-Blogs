@@ -5,11 +5,11 @@
                             <div class="card">
                                 <div class="card-body">
 
-                                    <h4 class="mt-0 header-title">{{$title}}</h4>
+                                    <h4 class="mt-0 header-title">{{__('admin.title-comment')}}</h4>
                                     
                                        <div class="mb-3 ">
                                        <a href="">
-                                            <input type="submit" value="Thêm tài Khoản" class="btn-primary btn mt-3 mb-1 ">
+                                        <button type="submit" class="btn-primary btn mt-3 mb-1 ">{{__('admin.more-acount')}}</button>
                                         </a>
                                         @if (session('msg'))
                                         <div class="alert alert-success text-center">{{session('msg')}}</div>
@@ -21,15 +21,14 @@
                                     <table id="datatable" class="table table-bordered dt-responsive nowrap table-striped" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                     <thead>
                                             <tr class="text-center">
-                                                <th>Mã số</th>
-                                                <th>Id</th>
-                                                <th>User_id</th>
-                                                <th>Blog_id</th>
-                                                <th>Content</th>
-                                                <th>Created_at</th>
-                                                <th>Updated_at</th>
-                                                <th>Actact</th>
-                                      
+                                                <th>{{__('column_name.sst')}}</th>
+                                                <th>{{__('column_name.id')}}</th>
+                                                <th>{{__('column_name.user_id')}}</th>
+                                                <th>{{__('column_name.blog_id')}}</th>
+                                                <th>{{__('column_name.content')}}</th>
+                                                <th>{{__('column_name.created_at')}}</th>
+                                                <th>{{__('column_name.updated_at')}}</th>
+                                                <th>{{__('column_name.actact')}}</th>
                                             </tr>
                                         </thead>
 
@@ -45,15 +44,15 @@
                                                 <td>{{$item->created_at}}</td>
                                                 <td>{{$item->updated_at}}</td>
                                                 <td>
-                                                    <a href="" class="btn-warning btn-sm mb-md-1">Update</a></div>
-                                                    <a onclick="return confirm('Bạn có chắc muốn xóa người dùng này')" href="" class="btn-danger btn-sm ">Delete</a></div>
+                                                    <a href="" class="btn-warning btn-sm mb-md-1">{{__('button.update')}}</a></div>
+                                                    <a onclick="return confirm('Bạn có chắc muốn xóa người dùng này')" href="" class="btn-danger btn-sm ">{{__('button.delete')}}</a></div>
                                                  </td>
                                                 
                                             </tr>
                                            @endforeach
                                            @else
                                            <tr>
-                                            <td solspan="4">Không có dữ liệu</td>
+                                            <td solspan="4">{{ __('msg.msg-no-data') }}</td>
                                            </tr>
                                           @endif
                                         </tbody>

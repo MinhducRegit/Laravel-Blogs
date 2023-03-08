@@ -5,7 +5,7 @@
   <div class="topbar-left">
       {{-- <!-- <a href="{{route('product')}}" class="logo"> --> --}}
           <!-- <img src="assets/images/anh-hacker-1.jpg" class="logo-lg" alt="" height="25"> -->
-         <div> Regit</div>
+         <div>{{__('admin.name-company')}}</div>
       <!-- </a> -->
   </div>
 
@@ -57,38 +57,30 @@
               </a>
               <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated dropdown-menu-lg px-1">
                   <!-- item-->
-                  <h6 class="dropdown-item-text">
-                              Notifications
-                          </h6>
                   <div class="slimscroll notification-item-list">
                       <!-- item-->
                       <a href="javascript:void(0);" class="dropdown-item notify-item active">
                           <div class="notify-icon bg-success"><i class="mdi mdi-cart-outline"></i></div>
-                          <p class="notify-details"><b>Your order is placed</b><span class="text-muted">Dummy text of the printing and typesetting industry.</span></p>
                       </a>
 
                       <!-- item-->
                       <a href="javascript:void(0);" class="dropdown-item notify-item">
                           <div class="notify-icon bg-danger"><i class="mdi mdi-message-text-outline"></i></div>
-                          <p class="notify-details"><b>New Message received</b><span class="text-muted">You have 87 unread messages</span></p>
                       </a>
 
                       <!-- item-->
                       <a href="javascript:void(0);" class="dropdown-item notify-item">
                           <div class="notify-icon bg-info"><i class="mdi mdi-filter-outline"></i></div>
-                          <p class="notify-details"><b>Your item is shipped</b><span class="text-muted">It is a long established fact that a reader will</span></p>
                       </a>
 
                       <!-- item-->
                       <a href="javascript:void(0);" class="dropdown-item notify-item">
                           <div class="notify-icon bg-success"><i class="mdi mdi-message-text-outline"></i></div>
-                          <p class="notify-details"><b>New Message received</b><span class="text-muted">You have 87 unread messages</span></p>
                       </a>
 
                       <!-- item-->
                       <a href="javascript:void(0);" class="dropdown-item notify-item">
                           <div class="notify-icon bg-warning"><i class="mdi mdi-cart-outline"></i></div>
-                          <p class="notify-details"><b>Your order is placed</b><span class="text-muted">Dummy text of the printing and typesetting industry.</span></p>
                       </a>
 
                   </div>
@@ -109,9 +101,9 @@
                   </a>
                   <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated profile-dropdown">
                       <!-- item-->
-                      <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Hồ sơ</a>
+                      <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i>{{ __('header.my-project') }}</a>
                       <div class="dropdown-divider"></div>
-                      <a class="dropdown-item text-danger" href=""><i class="mdi mdi-power text-danger"></i>Đăng xuất</a>
+                      <a class="dropdown-item text-danger" href=""><i class="mdi mdi-power text-danger">{{ __('header.log-out') }}</i></a>
                   </div>
               </div>
           </li>

@@ -1,0 +1,135 @@
+html {
+  height: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  margin: 0;
+}
+
+ul {
+  list-style-type:none;
+  margin : 0;
+}
+
+.wrapper {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  &-left {
+    &-icon-menu {
+      display: none;
+    }
+
+    &-icon-close {
+      display: none;
+    }
+
+    &-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &-logo-rt {
+        display: block;
+        width: 61px;
+        height: 61px;
+
+        & img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &-name-company {
+        font: 20px/29px 'Noto Sans JP',normal  ;
+        font-weight: 700;
+        color: #000000;
+      }
+    } 
+  }
+  .title {
+    font: 20px/29px 'Noto Sans JP',normal  ;
+    font-weight: 700;
+    color: #212121;
+    margin-top: 75px;
+    margin-bottom: 16px;
+  }
+  .form-group {
+    margin-bottom: 24px;
+  }
+  .label {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: #212121;
+  }
+  .label::after {
+    content: '*';
+    color: #E40303;
+  }
+  .input {
+    width: 570px;
+    height: 40px;
+    left: 471.39px;
+    top: 377px;
+    background: #FFFFFF;
+    border: 1px solid #DEDEDE;
+    border-radius: 4px;
+  }
+
+  .opera {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  .hidden-password {
+    display: flex;
+    align-items: center;
+    line-height: 18px;
+  }
+
+  span.remember {
+    color: #212121;
+    margin-left: 10px;
+  }
+
+  input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid #292D32;
+  }
+
+  button.button-summit {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 11px;
+    margin-top: 41px;
+  }
+
+  a.sign-up {
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: #007BFF;
+  }
+}
+

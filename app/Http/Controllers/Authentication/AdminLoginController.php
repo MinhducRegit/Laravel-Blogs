@@ -8,28 +8,29 @@ use App\Http\Requests\Authentication\LoginRequest;
 
 use DB;
 
-class LoginController extends Controller
+class AdminLoginController extends Controller
 {
     protected $table = 'users';
     public function index()
     {
-        return view('authentication.login.index');
+        $title = 'Login';
+        return view('authentication.login.index', compact('title'));
     }
 
     public function login(LoginRequest $request)
     {
-
         $email = $request->email;
         $password = md5($request->password);
 
-        $result = DB::table($this->table)->Where('email', $email)->Where('password', $password)->first();
+        $result = DB::table($this->table)->Where('email', $email)->Where('password', $password)->Where('role', 2)->first();
         if ($result) {
             $request->session()->put('email', $result->email);
             $request->session()->put('id', $result->id);
+            $request->session()->put('role', $result->role);
 
-            return redirect()->route('blog')->with('email', $request->email);
+            return redirect()->route('admin')->with('email', $request->email);
         } else {
-            return redirect()->route('login')->with('msg-error', __('msg.login-failed'));
+            return redirect()->route('login-admin')->with('msg-error', __('msg.login-failed'));
         }
     }
 }

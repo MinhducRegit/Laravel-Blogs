@@ -8,11 +8,11 @@
                             <div class="card">
                                 <div class="card-body">
 
-                                    <h4 class="mt-0 header-title">{{$title}}</h4>
+                                    <h4 class="mt-0 header-title">{{__('admin.title-user')}}</h4>
                                     
                                        <div class="mb-3 ">
                                        <a href="">
-                                            <input type="submit" value="Thêm tài Khoản" class="btn-primary btn mt-3 mb-1 ">
+                                            <button type="submit" class="btn-primary btn mt-3 mb-1 ">{{__('admin.more-acount')}}</button>
                                         </a>
                                         @if (session('msg'))
                                         <div class="alert alert-success text-center">{{session('msg')}}</div>
@@ -24,18 +24,17 @@
                                     <table id="datatable" class="table table-bordered dt-responsive nowrap table-striped" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                     <thead>
                                             <tr class="text-center">
-                                                <th>Mã số</th>
-                                                <th>Id</th>
-                                                <th>Name</th>
-                                                <th>Email</th>
-                                                <th>Password</th>
-                                                <th>Avatar</th>
-                                                <th>Gender</th>
-                                                <th>Role</th>
-                                                <th>Status</th>
-                                                <th>Created_at</th>
-                                                <th>Updated_at</th>
-                                                <th>Actact</th>
+                                                <th>{{__('column_name.sst')}}</th>
+                                                <th>{{__('column_name.id')}}</th>
+                                                <th>{{__('column_name.name')}}</th>
+                                                <th>{{__('column_name.email')}}</th>
+                                                <th>{{__('column_name.password')}}</th>
+                                                <th>{{__('column_name.avatar')}}</th>
+                                                <th>{{__('column_name.role')}}</th>
+                                                <th>{{__('column_name.status')}}</th>
+                                                <th>{{__('column_name.created_at')}}</th>
+                                                <th>{{__('column_name.updated_at')}}</th>
+                                                <th>{{__('column_name.actact')}}</th>
                                       
                                             </tr>
                                         </thead>
@@ -46,24 +45,23 @@
                                             <tr>
                                                 <td>{{$key + 1}}</td>
                                                 <td>{{$item->id}}</td>
-                                                <td>{{$item->name}}</td>
+                                                <td>{{$item->username}}</td>
                                                 <td>{{$item->email}}</td>
                                                 <td>{{$item->password}}</td>
                                                 <td>{{$item->avatar}}</td>
-                                                <td>{{$item->gender}}</td>
                                                 <td>{{$item->role}}</td>
                                                 <td>{{$item->status}}</td>
                                                 <td>{{$item->created_at}}</td>
                                                 <td>{{$item->updated_at}}</td>
                                                 <td class="text-center">
-                                                    <a onclick="return confirm('Bạn có chắc muốn xóa người dùng này')" href="" class="btn-danger btn-sm ">Xóa</a>
+                                                    <a onclick="return confirm({{ __('msg.msg-delete') }})" href="" class="btn-danger btn-sm ">{{__('button.delete')}}</a>
                                                 </td>
                                                 
                                             </tr>
                                            @endforeach
                                            @else
                                            <tr>
-                                            <td solspan="4">Không có dữ liệu</td>
+                                            <td solspan="4">{{ __('msg.msg-no-data') }}</td>
                                            </tr>
                                           @endif
                                         </tbody>

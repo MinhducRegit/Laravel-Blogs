@@ -1,9 +1,9 @@
 <?php
 return [
-  'title-login' => 'Login',
+  'title-login' => 'Sign in',
   'title-sign_up' => 'Sign Up',
   'user-name' => 'Username',
-  'email' => 'Email',
+  'email' => 'Username or email',
   'password' => 'Password',
   'password-confirm' => 'Password Confirmation',
   'gender' => 'Gender',

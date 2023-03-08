@@ -3,6 +3,8 @@
 use App\Http\Controllers\Admin\BlogsController;
 use App\Http\Controllers\Admin\CommentsController;
 use App\Http\Controllers\Admin\UsersController;
+use App\Http\Controllers\Authentication\AdminLoginController;
+use App\Http\Controllers\Authentication\AdminRegisterController;
 use App\Http\Controllers\Authentication\LoginController;
 use App\Http\Controllers\Authentication\RegisterController;
 use App\Http\Controllers\Client\BlogController;
@@ -30,7 +32,11 @@ Route::prefix('/')->group(function () {
 
 
 Route::prefix('/admin')->group(function () {
-  Route::get('/', [UsersController::class, 'index'])->name('users');
+  Route::get('/register', [AdminRegisterController::class, 'index'])->name('register-admin');
+  Route::post('/register', [AdminRegisterController::class, 'register']);
+  Route::get('/login', [AdminLoginController::class, 'index'])->name('login-admin');
+  Route::post('/login', [AdminLoginController::class, 'login']);
+  Route::get('/', [UsersController::class, 'index'])->name('admin');
   Route::get('/blogs', [BlogsController::class, 'index'])->name('blogs');
   Route::get('/comments', [CommentsController::class, 'index'])->name('comments');
 });
